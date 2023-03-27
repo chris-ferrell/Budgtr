@@ -7,6 +7,9 @@ const budget = require('../models/budget.js');
 //GET /budgets
 router.get('/', (req,res) => {
     // res.render('index');
+    res.render('budget_index.ejs', {
+        allBudgets:budget
+    })
 });
 // GET /budgets/:index
 router.get('/:index', (req,res) => {
