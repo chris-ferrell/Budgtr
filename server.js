@@ -6,7 +6,7 @@ const budgetRouter = require('./controller/budgetRouter')
 app.set('view engine', 'ejs');
 
 //routers setup
-app.use('/budget', budgetRouter);
+app.use('/budgets', budgetRouter);
 
 
 

@@ -13,7 +13,13 @@ router.get('/', (req,res) => {
 });
 // GET /budgets/:index
 router.get('/:index', (req,res) => {
+    const index = req.params.index;
     // res.render('Show');
+    res.render(
+        'budget_show.ejs', {
+            oneBudget:budget[index]
+        }
+    )
 })
 // GET /budgets/new
 router.get('/new', (req,res) => {

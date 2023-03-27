@@ -10,18 +10,27 @@
 </head>
 
 <body>
+  <div class="container">
+   <h1>Budgets</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% budgets.forEach(function(budget) { %>
+          <tr>
+            <td><%= budget.date %></td>
+            <td><a href="/budgets/<%= budgets.indexOf(budget) %>"><%= budget.name %></a></td>
+            <td><%= budget.amount %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+   </div>
+  </body>
 
-    <div class="container">
-
-        <h1> Budgtr </h1>
-        <ul>
-            <% for(let i=0;i<budgets.length;++i) {%>
-            <li>
-                 <a><%= budgets.date %> </a>  <a><% budgets.name %> </a> <a> <% budgets.amount %></a>
-            </li>
-            <%}%>
-        </ul>
-    </div>
-
-</body>
 </html>
