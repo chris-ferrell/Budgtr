@@ -12,7 +12,7 @@ app.use('/budgets', budgetRouter);
 
 
 app.get('/', (req,res) => {
-    app.send('Hit main Route!!!');
+    res.send('Hit main Route!!!');
 });
 
 
