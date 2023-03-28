@@ -1,14 +1,14 @@
 const express  = require('express');
 const router = express();
 // grabbing models modules
-const budget = require('../models/budget.js');
-
+const budgets = require('../models/budget.js').budgets;
+const bankAccount = require('../models/budget.js').bankAccount[0];
 
 //GET /budgets
 router.get('/', (req,res) => {
     // res.render('index');
     res.render('budget_index.ejs', {
-        allBudgets:budget
+        allBudgets:budgets
     })
 });
 // GET /budgets/:index
@@ -17,7 +17,8 @@ router.get('/:index', (req,res) => {
     // res.render('Show');
     res.render(
         'budget_show.ejs', {
-            oneBudget:budget[index]
+            oneBudget:budgets[index],
+            bankAcc:bankAccount
         }
     )
 })

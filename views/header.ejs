@@ -1,6 +1,18 @@
 <link rel="stylesheet" href="/normalize.css">
 <link rel="stylesheet" href="/skeleton.css">
-
-<header>
-    <h3> Header </h3>
-</header>
+<html>
+    <style>
+        ul {list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;}
+        li {float:left;}
+        li a {display: block;color:white;text-align:center;padding:10px 40px; text-decoration: none;}
+        header {text-align: right;}
+    </style>
+    <ul>
+        <li><a href="/budgets">home</a></li>
+        <li><a href="">account</a></li>
+        <li><a href="">add</a></li>
+    </ul>
+    <header>
+        <h5>checkings: <%= bankAcc.checking%> savings: <%=bankAcc.saving%></h5>
+    </header>
+</html>
