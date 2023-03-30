@@ -4,7 +4,7 @@ const app = express();
 const budgetRouter = require('./controller/budgetRouter')
 //Middle ware
 app.set('view engine', 'ejs');
-
+app.use(express.urlencoded({extended:false}));
 //routers setup
 app.use('/budgets', budgetRouter);
 

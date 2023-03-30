@@ -31,7 +31,8 @@ router.get('/:index', (req,res) => {
 })
 
 // POST /budgets
-router.post('', (req,res) => {
-
+router.post('/new', (req,res) => {
+    budgets.push(req.body);
+    res.redirect('/budgets');
 })
 module.exports = router;
