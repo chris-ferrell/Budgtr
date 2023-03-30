@@ -18,6 +18,13 @@ router.get('/new', (req,res) => {
     )
     //res.render('new');
 })
+router.get('/account', (req,res) => {
+    res.render(
+        'header.ejs', {
+            bankAcc:bankAccount
+        }
+        )
+})
 // GET /budgets/:index
 router.get('/:index', (req,res) => {
     const index = req.params.index;
@@ -35,4 +42,5 @@ router.post('/new', (req,res) => {
     budgets.push(req.body);
     res.redirect('/budgets');
 })
+
 module.exports = router;

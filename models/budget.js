@@ -70,7 +70,7 @@ budgets = [
       tags: ["pets"]
     },
   ];
-  const bankAccount = [{ checking:500,saving:1000}];
+  const bankAccount = [{ checking:10,saving:1000}];
 
   
 
