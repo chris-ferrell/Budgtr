@@ -14,14 +14,14 @@
     
       <div class="container">
        
-        <% if (oneBudget.amount < bankAcc.checking) { %>
+        <% if (oneBudget.amount < 0) { %>
             <style>
               body {
                 background-color: red;
               }
             </style>
             <% console.log("working")%>
-          <% } else { %>
+          <% } else if (oneBudget.amount >= 1000){ %>
             <style>
                 body {
                     background-color:green;
