@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Create a new budget item</title>
+    </head>
+   <%- include('./nav.ejs')%>
+    <body>
+        <h1>add new item</h1>
+       
+        <form action="/budgets/new" method="POST">
+            Name: <input type="text" name="name" /><br/>
+            date: <input type="text" name="date" /><br/>
+            
+            <input type="submit" value="Create item"/>
+        </form>
+    </body>
+</html>
+

@@ -11,6 +11,13 @@ router.get('/', (req,res) => {
         allBudgets:budgets
     })
 });
+// GET /budgets/new
+router.get('/new', (req,res) => {
+    res.render(
+        'create.ejs'
+    )
+    //res.render('new');
+})
 // GET /budgets/:index
 router.get('/:index', (req,res) => {
     const index = req.params.index;
@@ -22,10 +29,7 @@ router.get('/:index', (req,res) => {
         }
     )
 })
-// GET /budgets/new
-router.get('/new', (req,res) => {
-    //res.render('new');
-})
+
 // POST /budgets
 router.post('', (req,res) => {
 
